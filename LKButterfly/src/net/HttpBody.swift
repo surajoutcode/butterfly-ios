@@ -158,7 +158,7 @@ public extension Image {
                     em.onError(IllegalArgumentException("Could not turn image into a PNG."))
                 }
             }
-        case let self as ImageResource:
+        case let self as ImageResources:
             return self.load().flatMap { ImageBitmap(bitmap: $0).toHttpBodyRaw() }
         case let self as ImageReference:
             return self.uri.toHttpBody()

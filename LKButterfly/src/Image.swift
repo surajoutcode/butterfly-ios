@@ -64,7 +64,7 @@ public class ImageRemoteUrl : Image, KDataClass {
     public var description: String { return "ImageRemoteUrl(url = \(self.url))" }
     public func copy(url: String? = nil) -> ImageRemoteUrl { return ImageRemoteUrl(url: url ?? self.url) }
 }
-public class ImageResource : Image, KDataClass {
+public class ImageResources : Image, KDataClass {
     public var resource: DrawableResource
     public init(resource: DrawableResource) {
         self.resource = resource
@@ -74,9 +74,9 @@ public class ImageResource : Image, KDataClass {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(resource)
     }
-    public static func == (lhs: ImageResource, rhs: ImageResource) -> Bool { return lhs.resource == rhs.resource }
+    public static func == (lhs: ImageResources, rhs: ImageResources) -> Bool { return lhs.resource == rhs.resource }
     public var description: String { return "ImageResource(resource = \(self.resource))" }
-    public func copy(resource: DrawableResource? = nil) -> ImageResource { return ImageResource(resource: resource ?? self.resource) }
+    public func copy(resource: DrawableResource? = nil) -> ImageResources { return ImageResources(resource: resource ?? self.resource) }
 }
 
 public extension String {
@@ -89,7 +89,7 @@ public extension Bitmap {
     func asImage() -> Image { return ImageBitmap(bitmap: self) }
 }
 public extension DrawableResource {
-    func asImage() -> Image { return ImageResource(resource: self) }
+    func asImage() -> Image { return ImageResources(resource: self) }
 }
 
 
