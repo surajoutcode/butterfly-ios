@@ -121,10 +121,10 @@ public extension UIView {
             return backgroundDrawable
         }
     }
-    func setBackgroundColorResource(_ color: ColorResource) {
+    func setBackgroundColorResource(_ color: ColorResources) {
         backgroundColor = color
     }
-    func setBackgroundColorResource(color: ColorResource) {
+    func setBackgroundColorResource(color: ColorResources) {
         backgroundColor = color
     }
     func setBackgroundColor(_ color: UIColor) {

@@ -5,7 +5,7 @@ import UIKit
 
 //--- ViewFlipper.bindLoading(ObservableProperty<Boolean>, ColorResource? )
 public extension ViewFlipper {
-    func bindLoading(_ loading: ObservableProperty<Bool>, _ color: ColorResource? = nil) -> Void {
+    func bindLoading(_ loading: ObservableProperty<Bool>, _ color: ColorResources? = nil) -> Void {
         if subviews.count == 1 {
             let new = UIActivityIndicatorView(frame: .zero)
             if let color = color ?? ViewFlipper.defaultLoadingColor ?? UIView.appAccentColor {
@@ -18,7 +18,7 @@ public extension ViewFlipper {
             self.displayedChild = value ? 1 : 0
         }).until(self.removed)
     }
-    func bindLoading(loading: ObservableProperty<Bool>, color: ColorResource? = nil) -> Void {
+    func bindLoading(loading: ObservableProperty<Bool>, color: ColorResources? = nil) -> Void {
         return bindLoading(loading)
     }
     static var defaultLoadingColor: UIColor? = nil

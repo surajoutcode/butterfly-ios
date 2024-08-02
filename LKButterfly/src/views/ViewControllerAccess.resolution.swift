@@ -9,7 +9,7 @@ public extension ViewControllerAccess {
     func getString(resource: StringResource) -> String {
         return resource
     }
-    func getColor(resource: ColorResource) -> UIColor {
+    func getColor(resource: ColorResources) -> UIColor {
         return resource
     }
     var displayMetrics: DisplayMetrics {

@@ -6,7 +6,7 @@ import UIKit
 public typealias StringResource = String
 
 //--- ColorResource
-public typealias ColorResource = UIColor
+public typealias ColorResources = UIColor
 
 //--- DrawableResource
 public typealias DrawableResource = Drawable

@@ -5,7 +5,7 @@ import UIKit
 
 //--- Button.bindActive(ObservableProperty<Boolean>, ColorResource? , ColorResource? )
 public extension UIButton {
-    func bindActive(_ observable: ObservableProperty<Bool>, _ activeColorResource: ColorResource? = nil, _ inactiveColorResource: ColorResource? = nil) -> Void {
+    func bindActive(_ observable: ObservableProperty<Bool>, _ activeColorResource: ColorResources? = nil, _ inactiveColorResource: ColorResources? = nil) -> Void {
         observable.subscribeBy(onNext:  { ( value) in
             self.isUserInteractionEnabled = value
             if value {
@@ -19,7 +19,7 @@ public extension UIButton {
             }
         }).until(self.removed)
     }
-    func bindActive(observable: ObservableProperty<Bool>, activeColorResource: ColorResource? = nil, inactiveColorResource: ColorResource? = nil) -> Void {
+    func bindActive(observable: ObservableProperty<Bool>, activeColorResource: ColorResources? = nil, inactiveColorResource: ColorResources? = nil) -> Void {
         return bindActive(observable, activeColorResource, inactiveColorResource)
     }
     

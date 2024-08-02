@@ -372,7 +372,7 @@ com.lightningkite.butterfly.views.params
 com.lightningkite.butterfly.views.MonthCVD
 com.lightningkite.butterfly.views.CalendarDrawing
 com.lightningkite.butterfly.views.StringResource
-com.lightningkite.butterfly.views.ColorResource
+com.lightningkite.butterfly.views.ColorResources
 com.lightningkite.butterfly.views.DrawableResource
 com.lightningkite.butterfly.views.scrollToBottom
 com.lightningkite.butterfly.views.SelectDateMonthCVD
